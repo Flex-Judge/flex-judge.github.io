@@ -1,0 +1,168 @@
+/* Flex-Judge color palette */
+:root {
+  --flex-primary:       #a159e4;  /* vivid purple */
+  --flex-light:         #D8B5FF;  /* light lavender */
+  --flex-lighter:       #f8f3ff;  /* very pale lavender */
+  --flex-accent:        #7A1F9B;  /* deep purple accent */
+  --flex-dark:          #4A0072;  /* darkest purple */
+  --flex-dark-red:      #C2185B;
+  --flex-pink:          #FFD2E9;  /* vibrant pink */
+}
+
+/* Base layout */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #fff;
+  color: #111;
+  line-height: 1.6;
+  max-width: 50%;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(90deg, var(--flex-light), var(--flex-pink));
+  /* background: var(--flex-lighter); */
+  padding: 1.5rem 1rem;
+}
+.flex-logo {
+  height: 50px;
+  width: auto;
+  box-shadow: none;
+  border-radius: 0;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.25rem;
+  /* color: var(--flex-dark); */
+}
+
+/* Section titles */
+h2 {
+  font-size: 1.75rem;
+  margin-top: 2rem;
+  /* color: var(--flex-accent); */
+}
+h3 {
+  font-size: 1.25rem;
+  margin: 1rem 0;
+  /* color: var(--flex-dark); */
+}
+
+/* Example box */
+.example-box {
+  border: 2px solid var(--flex-light);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+/* Tighten space above example heading */
+.example-box h3 {
+  margin-top: 0.1rem;
+  margin-bottom: 1rem;
+}
+
+/* Labels */
+.label {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.user-label {
+  color: #333;
+}
+.judge-label {
+  color: var(--flex-accent);
+}
+.label-icon {
+  height: 24px;
+  width: auto;
+}
+
+/* Chat boxes */
+.chat-box {
+  margin-bottom: 1rem;
+}
+.chat-box.user-box .message {
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+}
+.chat-box.judge-box .message {
+  background: var(--flex-lighter);
+  border: 2px solid var(--flex-light);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.message {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+/* Media rows */
+.media-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.media-row.single {
+  justify-content: flex-start;
+}
+figure {
+  margin: 0;
+  text-align: center;
+}
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  /* color: var(--flex-dark); */
+}
+
+/* Inline audio label next to player */
+.media-row.single figure.audio-inline {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.media-row.single figure.audio-inline figcaption {
+  margin: 0;
+}
+
+/* Uniform video sizing */
+.media-row figure video {
+  max-height: 250px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Highlight text */
+.highlight {
+  background: var(--flex-primary);
+  color: #fff;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+}
+
+/* Ground-truth MOS */
+.mos-box {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+.mos-value {
+  color: var(--flex-dark-red);
+}
+
+/* Separator */
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 2rem 0;
+}
